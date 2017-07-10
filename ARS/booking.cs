@@ -154,12 +154,12 @@ namespace ARS
                 }
                 
                 //Send Mail
-                string from = "sagarnath559@gmail.com";
+                string from = "//your email address";
                 string subject = "Ticket";
                 string body = "Your Booking Details\nBooking ID: " + booking_id.Text + "\tFlight Id: " + flight_id.Text + "\nAirlines: " + airline.Text + "\tDate Of Journey: " + date.Text + "\nSource: " + source.Text + "\tDestination: " + destination.Text + "\nArrival: " + arrival.Text + "\tDeparture: " + departure.Text + "\nDuration: " + duration.Text + "\tClass: " + class1.Text + "\nNo of Seats: " + no_of_seats.Text + "\nTotal Fare: " + total_fare.Text + "";
                 string smtp = "smtp.gmail.com";
-                string user = "sagarnath559@gmail.com";
-                string pass = "S@garnath96";
+                string user = "//your gmail userid";
+                string pass = "//your gmail password";
                 MailMessage mail = new MailMessage(from, email.Text, subject, body);
                 SmtpClient client = new SmtpClient(smtp);
                 client.Port = 587;
@@ -168,14 +168,15 @@ namespace ARS
                 client.Send(mail);
 
                 //Send Message
+                //create a account on vianett to send messages
                 WebClient sms = new WebClient();
                 try
                 {
                     Double v = Convert.ToDouble(mobile_no.Text);
-                    string frm = "kharviakash94@gmail.com";
-                    string passw = "1n74K";
+                    string frm = "//vianett emailid";
+                    string passw = "vianett password";
                     string message = "Your Booking Details\nBooking ID: " + booking_id.Text + "\tFlight Id: " + flight_id.Text + "\nAirlines: " + airline.Text +"\nArrival: " + arrival.Text + "\tDeparture: " + departure.Text + "\tClass: " + class1.Text+"";
-                    string url = "http://smsc.vianett.no/v3/send.ashx?src=+918655672631&dst=+91" + v + "&msg=" + message + "&username=" + frm + "&password=" + passw + "";
+                    string url = "//vianett generated url" + v + "&msg=" + message + "&username=" + frm + "&password=" + passw + "";
                     string result = sms.DownloadString(url);
                     if (result.Contains("OK"))
                     {
