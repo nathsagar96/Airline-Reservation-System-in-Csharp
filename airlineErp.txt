@@ -1,0 +1,23 @@
+Features and Scope Of Airline Reservation System
+
+Message:After booking is done,the Customer get details regarding the Flight through message.
+
+Gmail:After booking is done,the Customer gets details regarding the Flight through mail on his registered email-id.
+
+PDF:Once the ticket is confirmed, PDF is generated.
+
+Ticket Cancellation :Auto-Increment in number of seats feature after the Ticket is Cancelled.
+  
+Ticket Booking:Auto-Decrement in number of seats feature after the Ticket is Reserved.
+
+Flight Schedule:Customer can Search for a Flight and check the status and schedule regarding a particular flight.
+
+Flight Search:Customer can search a flight.
+
+
+Other Features:
+
+1]On One Ticket multiple Passengers can reserve seats.
+2]User Freindly Interface.
+
+
